@@ -1,5 +1,7 @@
 a= []
 
+special_char = '''"'!#$%&‚()*+,-./:;<=>?@[`\]^_„{|}~''' 
+
 while True:
     try:
         a.append(input())

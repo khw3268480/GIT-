@@ -1,0 +1,16 @@
+n = int(input())
+
+olds, names = [], []
+result = []
+for i in range(n):  
+    old, name = input().split()
+    old = int(old)
+    olds.append(old)
+    names.append(name)
+
+result = list(zip(olds, names))
+
+result = sorted(result, key = lambda x: x[0])
+
+for s in result:
+    print(*s)

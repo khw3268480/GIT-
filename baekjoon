@@ -1,16 +1,14 @@
-n = int(input())
+import math
 
-olds, names = [], []
-result = []
-for i in range(n):  
-    old, name = input().split()
-    old = int(old)
-    olds.append(old)
-    names.append(name)
-
-result = list(zip(olds, names))
-
-result = sorted(result, key = lambda x: x[0])
-
-for s in result:
-    print(*s)
+while True:
+    a = int(input())
+    if a == 0:
+        break
+    else:
+        a = str(a)
+        # b = int(a)
+        if len(a)%2 == 0:
+            if a[0:math.floor(len(a)//2)] == reversed(a[math.ceil(len(a)//2):]):
+                print("팰린드롬")
+        if len(a)%2 == 1:
+            pass

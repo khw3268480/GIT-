@@ -10,11 +10,10 @@ class cube:
     
 while True:
     try:
-        length = int(input())
-        cl = cube(length, 0, 0)
+        cl = cube(int(input()), 0, 0)
+        print(cl.Area)
         print(cl.Calc())
+        print(cl.Area)
     except:
         break
-
-
 

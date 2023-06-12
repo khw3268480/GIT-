@@ -1,5 +1,4 @@
 import sys
-# 23시 , 1시 도 체크를 해야겠구나?
 
 class Time:
     def __init__(self, id, login_hour, login_minute, logout_hour, logout_minute):
@@ -9,14 +8,14 @@ class Time:
         self.logout_hour = logout_hour
         self.logout_minute = logout_minute
     def time_check(self):
-        if logout_hour - login_hour == 1 and logout_minute > login_minute:
+        if self.logout_hour - login_hour == 1 and logout_minute >= login_minute:
             if logout_minute - login_minute < 0:
                 hour = str(logout_hour - login_hour - 1).zfill(2)
                 minute = str(60 - abs(logout_minute - login_minute)).zfill(2)
             else:
                 hour = str(logout_hour - login_hour).zfill(2)
                 minute = str(logout_minute - login_minute).zfill(2)
-            return f"{self.id} {hour}:{minute}"
+            return f"{id} {hour}:{minute}"
         elif abs(logout_hour - login_hour) > 1:
             if logout_minute - login_minute < 0:
                 hour = str(logout_hour - login_hour - 1).zfill(2)
@@ -24,7 +23,7 @@ class Time:
             else:
                 hour = str(logout_hour - login_hour).zfill(2)
                 minute = str(logout_minute - login_minute).zfill(2)
-            return f"{self.id} {hour}:{minute}"
+            return f"{id} {hour}:{minute}"
 
 
 while True:

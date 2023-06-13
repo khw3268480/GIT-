@@ -1,7 +1,7 @@
 import sys
 
 class Time:
-    def __init__(self, id, login_hour, login_minute, logout_hour, logout_minute):
+    def __init__(self, id, login_hour, login_minute, logout_hour, logout_minute): 
         self.id = id
         self.login_hour = login_hour
         self.login_minute = login_minute

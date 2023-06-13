@@ -1,13 +1,12 @@
 import sys
 
-n = int(input())
-num_size = list(map(int, sys.stdin.readline().split()))
-num_lst = list(sorted(set(num_size)))
+n = int(sys.stdin.readline())
+lst1 = set(map(int, sys.stdin.readline().split()))
+m = int(sys.stdin.readline())
+lst2 = list(map(int, sys.stdin.readline().split()))
 
-dic = dict()
-for i in range(len(num_lst)):
-    dic[num_lst[i]] = i # <- 
-for i in num_size:
-    print(dic[i],end=" ")
-
-# print(dic)
+for p in lst2:
+    if p in lst1:
+        print("1", end = " ")
+    else:
+        print("0", end = " ")

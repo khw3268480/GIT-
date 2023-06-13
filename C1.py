@@ -4,9 +4,9 @@ class cube:
         self.Area = Area
         self.Volume = Volume
     def Calc(self):
-        Area = 6*(self.length)**2
-        Volume = (self.length)**3
-        return f"Side length = {self.length}, Area = {Area}, Volume = {Volume}"
+        self.Area = 6*(self.length)**2
+        self.Volume = (self.length)**3
+        return f"Side length = {self.length}, Area = {self.Area}, Volume = {self.Volume}"
     
 while True:
     try:
